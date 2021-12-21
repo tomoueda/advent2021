@@ -39,7 +39,13 @@ for step in range(50):
     input_image = output_image 
 
 for i in input_image:
-    print i
+    l = ''
+    for c in i:
+        if c == '#':
+            l += '#'
+        else:
+            l += ' '
+    print l
 
 print sum([item.count('#') for item in input_image])
 print len(input_image), len(input_image[0])
